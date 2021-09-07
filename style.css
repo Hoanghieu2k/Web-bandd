@@ -1,0 +1,414 @@
+/* reset CSS*/
+*{
+    padding: 0 ;
+    box-sizing: border-box;
+    margin: 0; 
+}   
+html{
+    /* thuộc tính cuộn */
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* comlum */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: white !important;
+    /* importane là độ ưu tiên nhất dung ở đâu thì ư u tiên ở đó */
+}
+.row{
+    margin: 0 -8px;
+}
+.col{
+    float: left; 
+    padding: 0 8px;
+}
+.text-center{
+    text-align:center;
+}
+.col-half{
+    width: 50%;
+}
+.col-thirt{
+    width: 33.33333%;
+}
+
+/* main*/
+#nav{
+    display: block;
+}
+#main {
+    
+}
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /* overflow thuppjc tíh tràn ra ngoáif */
+    /* overflow: hidden; */
+}
+#nav,.subnav{
+    list-style-type:none ;
+}
+#nav li{
+    position: relative;
+}
+#nav>li{
+    display: inline-block;
+}
+#nav .subnav{
+    display: none;
+    min-height: 60px;
+    position: absolute;
+    top:46px;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);  /* trục X ,trục Y màu*/
+}
+#nav > li >a{
+    color: white;
+    display: inline-block;
+}
+#nav li a{ 
+    text-decoration: none;
+    line-height: 46px; 
+    padding: 0 24px;
+    font-size: 13px;
+
+
+}
+#nav li:hover .subnav{
+    display: block;
+}
+.subnav li:hover a,
+#nav >li:hover >a{
+    
+    background-color: red;   
+}
+.subnav li  a{
+    color: black;
+   display: block;
+   padding: 0 16px;
+   line-height: 38px;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.search,.mobile-menu-btn{
+    display: inline;
+    padding: 12px 14px;
+    float:right;
+}
+.ti-search,.ti-menu{
+    font-size: 20px;
+    line-height: 46px;
+    color: white;
+   
+}
+.search:hover
+{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.mobile-menu-btn:hover{
+    background: #ccc;
+    color: white;
+}
+
+ #slider {
+     position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background:url('/assets/css/img/img_la.jpg') top center/  cover no-repeat ;
+}
+#slider .text-content{
+    position:absolute;
+    text-align: center;
+    color: white;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; chạy thẳng sang 2 bên nên căn giữá */
+    /* right: 0;
+    left: 0; vẫn căn giữu đước áp dụng position */
+}
+#slider .text-heading{
+    font-weight: 500; /* giảm viền cỡ chữ */
+    font-size: 24px;
+    margin: 10px;
+}
+#slider .text-con{ 
+    font-size: 15px;
+    margin: 10px;
+}
+#content .conten-section{
+    
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+   text-align: justify;
+   /* giúp chữ 2 bên căn đều 2 bên (giống trang báo) */
+   padding: 60px 0;
+   line-height:1.4 ;
+   /* tiếng anh 1.4   tiếng việt 1.6 */
+   padding-right: 16px;
+   padding-left: 16px;
+}
+#content .content-section{
+   font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px; 
+    /*thuộc tính cách chữ  */
+    margin:15px ;
+}
+#content .section-heading{
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0px 15px 0;
+    font-style: italic;
+    /* thuộc tính thay đổi kiểu dáng chữ (chữ nghiên) */
+    opacity: 60%;
+    /* độ mờ cảu chữ */
+}
+#content .menber-section{
+    margin:15px 0 ;
+    
+   
+}
+#content .member-name{
+    margin: 15px 0;
+    font-size: 15px;
+}   
+#content .member-img{
+    width: 154px;
+    height: 205px;
+    border-radius: 4px;
+}
+
+.ticket-list{
+    margin: 40px 0;
+}
+.ticket-list li{
+    padding: 8px 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd
+
+}
+.ticket-list .Sold-out{
+    margin-left: 16px;
+    padding: 0 8px;
+    background: red;
+}
+.ticket-list .quantity{
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+/* palce */
+.place-list{
+    padding-bottom: 32px;
+    margin-top: 32px;
+ 
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-img{
+    width: 100%;
+    display: block;
+    
+}
+.place-body{
+    background-color: #fff;
+    font-size: 15px;
+    padding:16px ;
+}
+.place-name{
+    font-weight: bolder;
+    font-size: 15px;
+  
+    
+}
+.place-date{
+  margin-top: 15px ; 
+  color: #757575;  
+}
+.place-desc{
+   margin-top: 15px ;
+   line-height: 1.6 ;
+}
+.place-buy-btn{
+    margin-top: 15px ;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+}.place-buy-btn:hover{
+    opacity: 0.3;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 300px;
+    position: relative;
+    animation: modalFaceIn ease 0.5s;
+}
+header.modal-header {
+    height: 130px;
+    display: flex;
+    background: #009688;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+i.ti-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    padding: 8px 16px;
+}
+i.ti-close:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+i.ti-bag {
+    font-size: 21px;
+    margin-right: 10px;
+}
+/* body */
+.modal-body {
+    padding: 8px 16px;
+}
+label.modal-label {
+    display: block;
+    font-size: 15px;
+    margin: 15px 0 10px 0;
+}
+input.modal-input {
+    font-size: 15px;
+    padding: 9px;
+    width: 100%;
+    border: 1px solid #ccc
+}
+button.modal-pay {
+    margin: 16px 0;
+    width: 100%;
+    background: #009688;
+    color: white;
+    font-size: 15px;
+    padding: 16px;
+}
+.modal-pay:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.modal-footer {
+    font-size: 15px;
+    margin: 15px 0;
+    float: right;
+    height: 22px;
+}
+/* contact */
+.contact-item{
+    font-size: 18px;
+}
+/* .contact-right1,.contact-right2{
+    float: left;
+} */
+
+input.contact-name {
+    
+    border: 1px solid;
+    padding: 8px;
+}
+input.contact-name3 {
+    border: 1px solid;
+    padding: 8px;
+    width: 100%;
+    margin-top: 8px;
+}
+.contact-send {
+    float: right;
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    margin: 16px 0;
+}
+.contact-send:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.contact-map img{
+    width: 100%;
+}
+/* footer */
+.footer-list {
+    padding: 64px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-content{
+    margin: 15px 0;
+    font-size: 15px;
+}
+.footer-list{
+    font-size: 24px;
+}
+.footer-list a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+}
+.footer-list a:hover{
+   /* càng giảm rgba thì càng mờ */
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+@keyframes modalFaceIn{ /* hỗ trợ bằng hàm @keyframes */
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
